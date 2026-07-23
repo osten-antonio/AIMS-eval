@@ -1,0 +1,14 @@
+[project]
+name = "nougat-server"
+version = "0.1.0"
+description = "Nougat model inference server"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.104.0",
+    "uvicorn[standard]>=0.24.0",
+    "huggingface_hub<1.0",
+    "transformers>=4.35.0",
+    "torch>=2.0.0",
+    "pillow>=10.0.0",
+    "pix2tex>=0.1.1",
+]
