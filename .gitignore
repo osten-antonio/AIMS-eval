@@ -1,0 +1,11 @@
+Fonts/
+data/images/
+data/tex/
+data/manifest.json
+data/raw_items.json
+data/raw_word_problems.json
+data/inference_results.csv
+results/
+.venv/
+.ipynb_checkpoints/
+__pycache__/
