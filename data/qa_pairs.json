@@ -1,0 +1,422 @@
+[
+  {
+    "id": 0,
+    "text": "347 + 589",
+    "latex": "347 + 589",
+    "final_answer": 936,
+    "category": "arithmetic"
+  },
+  {
+    "id": 1,
+    "text": "2456 × 37",
+    "latex": "2456 \\times 37",
+    "final_answer": 90872,
+    "category": "arithmetic"
+  },
+  {
+    "id": 2,
+    "text": "144 ÷ 12",
+    "latex": "144 \\div 12",
+    "final_answer": 12,
+    "category": "arithmetic"
+  },
+  {
+    "id": 3,
+    "text": "2^10",
+    "latex": "2^{10}",
+    "final_answer": 1024,
+    "category": "arithmetic"
+  },
+  {
+    "id": 4,
+    "text": "√169",
+    "latex": "\\sqrt{169}",
+    "final_answer": 13,
+    "category": "arithmetic"
+  },
+  {
+    "id": 5,
+    "text": "5x - 3 = 22, solve for x",
+    "latex": "5x - 3 = 22",
+    "final_answer": 5,
+    "category": "algebra"
+  },
+  {
+    "id": 6,
+    "text": "2x + 7 = 19, solve for x",
+    "latex": "2x + 7 = 19",
+    "final_answer": 6,
+    "category": "algebra"
+  },
+  {
+    "id": 7,
+    "text": "3(x - 4) = 15, solve for x",
+    "latex": "3(x - 4) = 15",
+    "final_answer": 9,
+    "category": "algebra"
+  },
+  {
+    "id": 8,
+    "text": "x² = 49, solve for x",
+    "latex": "x^{2} = 49",
+    "final_answer": 7,
+    "category": "algebra"
+  },
+  {
+    "id": 9,
+    "text": "4x + 10 = 2x + 24, solve for x",
+    "latex": "4x + 10 = 2x + 24",
+    "final_answer": 7,
+    "category": "algebra"
+  },
+  {
+    "id": 10,
+    "text": "Area of rectangle: length=12, width=7",
+    "latex": "A = l \\times w = 12 \\times 7",
+    "final_answer": 84,
+    "category": "geometry"
+  },
+  {
+    "id": 11,
+    "text": "Perimeter of square: side=9",
+    "latex": "P = 4s = 4 \\times 9",
+    "final_answer": 36,
+    "category": "geometry"
+  },
+  {
+    "id": 12,
+    "text": "Area of triangle: base=14, height=6",
+    "latex": "A = \\frac{1}{2} \\times b \\times h = \\frac{1}{2} \\times 14 \\times 6",
+    "final_answer": 42,
+    "category": "geometry"
+  },
+  {
+    "id": 13,
+    "text": "Circumference of circle: radius=7, π≈22/7",
+    "latex": "C = 2\\pi r = 2 \\times \\frac{22}{7} \\times 7",
+    "final_answer": 44,
+    "category": "geometry"
+  },
+  {
+    "id": 14,
+    "text": "Area of circle: radius=5, π≈3.14",
+    "latex": "A = \\pi r^{2} = 3.14 \\times 5^{2}",
+    "final_answer": 78.5,
+    "category": "geometry"
+  },
+  {
+    "id": 15,
+    "text": "15% × 240",
+    "latex": "15\\% \\times 240",
+    "final_answer": 36,
+    "category": "percentage"
+  },
+  {
+    "id": 16,
+    "text": "Shirt $80, 25% off. Sale price?",
+    "latex": "80 - 0.25 \\times 80",
+    "final_answer": 60,
+    "category": "percentage"
+  },
+  {
+    "id": 17,
+    "text": "Price $50 → $65. Percentage increase?",
+    "latex": "\\frac{65 - 50}{50} \\times 100",
+    "final_answer": 30,
+    "category": "percentage"
+  },
+  {
+    "id": 18,
+    "text": "5.5 km = ? meters",
+    "latex": "5.5 \\text{ km} = 5.5 \\times 1000 \\text{ m}",
+    "final_answer": 5500,
+    "category": "conversion"
+  },
+  {
+    "id": 19,
+    "text": "3 hours 45 minutes = ? minutes",
+    "latex": "3 \\times 60 + 45",
+    "final_answer": 225,
+    "category": "conversion"
+  },
+  {
+    "id": 20,
+    "text": "72°F = ? °C, C = (F-32) × 5/9",
+    "latex": "C = (72 - 32) \\times \\frac{5}{9}",
+    "final_answer": 22.2,
+    "category": "conversion"
+  },
+  {
+    "id": 21,
+    "text": "2.5 minutes = ? seconds",
+    "latex": "2.5 \\times 60",
+    "final_answer": 150,
+    "category": "conversion"
+  },
+  {
+    "id": 22,
+    "text": "Bag: 5 red, 3 blue, 2 green. P(red)?",
+    "latex": "P(\\text{red}) = \\frac{5}{5 + 3 + 2}",
+    "final_answer": 0.5,
+    "category": "probability"
+  },
+  {
+    "id": 23,
+    "text": "Roll die once. P(X > 4)?",
+    "latex": "P(X > 4) = \\frac{2}{6}",
+    "final_answer": 0.333,
+    "category": "probability"
+  },
+  {
+    "id": 24,
+    "text": "8th term of arithmetic sequence: 5, 9, 13, 17, ...",
+    "latex": "a_{n} = a_{1} + (n-1)d = 5 + 7 \\times 4",
+    "final_answer": 33,
+    "category": "sequence"
+  },
+  {
+    "id": 25,
+    "text": "Sum of first 6 terms of: 2, 5, 8, 11, ...",
+    "latex": "S_{n} = \\frac{n}{2}(2a_{1} + (n-1)d) = \\frac{6}{2}(2 \\times 2 + 5 \\times 3)",
+    "final_answer": 51,
+    "category": "sequence"
+  },
+  {
+    "id": 26,
+    "text": "5th term of geometric sequence: 3, 6, 12, 24, ...",
+    "latex": "a_{n} = a_{1} \\cdot r^{n-1} = 3 \\cdot 2^{4}",
+    "final_answer": 48,
+    "category": "sequence"
+  },
+  {
+    "id": 27,
+    "text": "x + y = 12, x - y = 4. Find x.",
+    "latex": "\\begin{cases} x + y = 12 \\\\ x - y = 4 \\end{cases}",
+    "final_answer": 8,
+    "category": "system"
+  },
+  {
+    "id": 28,
+    "text": "2x + y = 13, x + y = 8. Find y.",
+    "latex": "\\begin{cases} 2x + y = 13 \\\\ x + y = 8 \\end{cases}",
+    "final_answer": 3,
+    "category": "system"
+  },
+  {
+    "id": 29,
+    "text": "5!",
+    "latex": "5! = 5 \\times 4 \\times 3 \\times 2 \\times 1",
+    "final_answer": 120,
+    "category": "arithmetic"
+  },
+  {
+    "id": 30,
+    "text": "gcd(48, 36)",
+    "latex": "\\gcd(48, 36)",
+    "final_answer": 12,
+    "category": "arithmetic"
+  },
+  {
+    "id": 31,
+    "text": "log₂(64)",
+    "latex": "\\log_{2}(64)",
+    "final_answer": 6,
+    "category": "algebra"
+  },
+  {
+    "id": 32,
+    "text": "(3/4) × (8/9)",
+    "latex": "\\frac{3}{4} \\times \\frac{8}{9}",
+    "final_answer": 0.667,
+    "category": "arithmetic"
+  },
+  {
+    "id": 33,
+    "text": "Rectangle: diagonal=13, side=5. Other side?",
+    "latex": "a = \\sqrt{c^{2} - b^{2}} = \\sqrt{13^{2} - 5^{2}}",
+    "final_answer": 12,
+    "category": "geometry"
+  },
+  {
+    "id": 34,
+    "text": "Volume of cube: side=4",
+    "latex": "V = s^{3} = 4^{3}",
+    "final_answer": 64,
+    "category": "geometry"
+  },
+  {
+    "id": 35,
+    "text": "x² - 5x + 6 = 0, larger root?",
+    "latex": "x^{2} - 5x + 6 = 0",
+    "final_answer": 3,
+    "category": "algebra"
+  },
+  {
+    "id": 36,
+    "text": "Slope of line through (2,3) and (8,15)",
+    "latex": "m = \\frac{y_{2} - y_{1}}{x_{2} - x_{1}} = \\frac{15 - 3}{8 - 2}",
+    "final_answer": 2,
+    "category": "algebra"
+  },
+  {
+    "id": 37,
+    "text": "Distance between (1,2) and (4,6)",
+    "latex": "d = \\sqrt{(4-1)^{2} + (6-2)^{2}}",
+    "final_answer": 5,
+    "category": "geometry"
+  },
+  {
+    "id": 38,
+    "text": "Hypotenuse of right triangle: legs 6 and 8",
+    "latex": "c = \\sqrt{a^{2} + b^{2}} = \\sqrt{6^{2} + 8^{2}}",
+    "final_answer": 10,
+    "category": "geometry"
+  },
+  {
+    "id": 39,
+    "text": "3² + 4²",
+    "latex": "3^{2} + 4^{2}",
+    "final_answer": 25,
+    "category": "arithmetic"
+  },
+  {
+    "id": 40,
+    "text": "Median of {3, 7, 9, 12, 15}",
+    "latex": "\\text{median}\\{3, 7, 9, 12, 15\\}",
+    "final_answer": 9,
+    "category": "statistics"
+  },
+  {
+    "id": 41,
+    "text": "Mean of {4, 8, 12, 16, 20}",
+    "latex": "\\text{mean} = \\frac{4 + 8 + 12 + 16 + 20}{5}",
+    "final_answer": 12,
+    "category": "statistics"
+  },
+  {
+    "id": 42,
+    "text": "A car travels at 80 km/h for 3 hours. What is the total distance traveled?",
+    "latex": "d = v \\times t = 80 \\times 3",
+    "final_answer": 240,
+    "category": "word_problem"
+  },
+  {
+    "id": 43,
+    "text": "If 6 workers can build a wall in 10 days, how many days would it take 15 workers to build the same wall?",
+    "latex": "6 \\times 10 = 15 \\times d",
+    "final_answer": 4,
+    "category": "word_problem"
+  },
+  {
+    "id": 44,
+    "text": "You invest $1000 at 5% simple interest per year for 3 years. What is the total amount in the account?",
+    "latex": "A = P(1 + rt) = 1000(1 + 0.05 \\times 3)",
+    "final_answer": 1150,
+    "category": "word_problem"
+  },
+  {
+    "id": 45,
+    "text": "A train travels 360 km in 4 hours. What is its average speed in km/h?",
+    "latex": "v = \\frac{d}{t} = \\frac{360}{4}",
+    "final_answer": 90,
+    "category": "word_problem"
+  },
+  {
+    "id": 46,
+    "text": "Sarah is 3 times as old as her brother. In 12 years, she will be twice as old as he will be. How old is Sarah now?",
+    "latex": "3b + 12 = 2(b + 12)",
+    "final_answer": 36,
+    "category": "word_problem"
+  },
+  {
+    "id": 47,
+    "text": "A recipe calls for 3 cups of flour to make 24 cookies. How many cups of flour are needed to make 40 cookies?",
+    "latex": "\\frac{3}{24} = \\frac{x}{40}",
+    "final_answer": 5,
+    "category": "word_problem"
+  },
+  {
+    "id": 48,
+    "text": "A car uses 8 liters of fuel to travel 100 km. How many liters does it need to travel 350 km?",
+    "latex": "\\frac{8}{100} = \\frac{x}{350}",
+    "final_answer": 28,
+    "category": "word_problem"
+  },
+  {
+    "id": 49,
+    "text": "Two trains start from the same point. One goes north at 60 km/h, the other goes east at 80 km/h. After 2 hours, how far apart are they?",
+    "latex": "d = \\sqrt{(60 \\times 2)^{2} + (80 \\times 2)^{2}}",
+    "final_answer": 200,
+    "category": "word_problem"
+  },
+  {
+    "id": 50,
+    "text": "A shopkeeper buys an item for $120 and sells it for $150. What is the profit percentage?",
+    "latex": "\\frac{150 - 120}{120} \\times 100",
+    "final_answer": 25,
+    "category": "word_problem"
+  },
+  {
+    "id": 51,
+    "text": "A pool is being filled at 150 liters per hour. If the pool holds 1200 liters, how many hours will it take to fill?",
+    "latex": "t = \\frac{1200}{150}",
+    "final_answer": 8,
+    "category": "word_problem"
+  },
+  {
+    "id": 52,
+    "text": "A movie starts at 7:15 PM and runs for 2 hours and 35 minutes. What time does it end?",
+    "latex": "7{:}15 + 2{:}35",
+    "final_answer": 950,
+    "category": "word_problem"
+  },
+  {
+    "id": 53,
+    "text": "Tom has $50. He buys 3 notebooks at $4.50 each and 2 pens at $2.75 each. How much money does he have left?",
+    "latex": "50 - 3 \\times 4.50 - 2 \\times 2.75",
+    "final_answer": 30.5,
+    "category": "word_problem"
+  },
+  {
+    "id": 54,
+    "text": "A rectangle's length is 5 cm more than its width. If the perimeter is 38 cm, what is the width?",
+    "latex": "2(w + 5) + 2w = 38",
+    "final_answer": 7,
+    "category": "word_problem"
+  },
+  {
+    "id": 55,
+    "text": "A elevator is on the 3rd floor. It goes up 7 floors, then down 4 floors, then up 2 floors. What floor is it on now?",
+    "latex": "3 + 7 - 4 + 2",
+    "final_answer": 8,
+    "category": "word_problem"
+  },
+  {
+    "id": 56,
+    "text": "A jar has red and blue marbles in the ratio 3:5. If there are 40 marbles total, how many are red?",
+    "latex": "r = \\frac{3}{3 + 5} \\times 40",
+    "final_answer": 15,
+    "category": "word_problem"
+  },
+  {
+    "id": 57,
+    "text": "A student scored 78, 85, 92, and 81 on four tests. What score does she need on the fifth test to average 85?",
+    "latex": "\\frac{78 + 85 + 92 + 81 + x}{5} = 85",
+    "final_answer": 89,
+    "category": "word_problem"
+  },
+  {
+    "id": 58,
+    "text": "Two pipes can fill a tank in 6 hours and 8 hours respectively. How many hours will it take to fill the tank using both pipes?",
+    "latex": "\\frac{1}{6} + \\frac{1}{8} = \\frac{1}{t}",
+    "final_answer": 3.429,
+    "category": "word_problem"
+  },
+  {
+    "id": 59,
+    "text": "A farmer has 240 meters of fencing and wants to enclose a rectangular field. If the length is twice the width, what is the width?",
+    "latex": "2(2w) + 2w = 240",
+    "final_answer": 40,
+    "category": "word_problem"
+  }
+]
