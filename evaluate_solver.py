@@ -55,9 +55,12 @@ def extract_number(text: str) -> float | None:
 
 def compare_answers(expected, solver_answer: str, tolerance: float = 0.01) -> bool:
     """Compare expected answer with solver answer, handling verbose responses."""
-    expected_num = float(expected)
+    if isinstance(expected, str):
+        expected_num = extract_number(expected)
+    else:
+        expected_num = float(expected)
     solver_num = extract_number(solver_answer)
-    if solver_num is None:
+    if expected_num is None or solver_num is None:
         return False
     
     # Use relative tolerance for larger numbers, absolute for small
@@ -94,7 +97,7 @@ if __name__ == "__main__":
 
     for pair in qa_pairs:
         try:
-            resp = requests.post(args.url, json={"question": pair["latex"], "model": args.model}, timeout=30000)
+            resp = requests.post(args.url, json={"question": pair["text"], "model": args.model}, timeout=30000)
             resp.raise_for_status()
             solver_data = resp.json()
             solver_answer = solver_data.get("answer", "")
@@ -117,7 +120,6 @@ if __name__ == "__main__":
         row = {
             "id": r["qa_pair"].get("id"),
             "text": r["qa_pair"].get("text"),
-            "latex": r["qa_pair"].get("latex"),
             "final_answer": r["qa_pair"].get("final_answer"),
             "category": r["qa_pair"].get("category"),
             "solver_answer": r["solver_answer"],
