@@ -49,7 +49,7 @@ if __name__ == "__main__":
     print("-" * 70)
 
     for i, pair in enumerate(qa_pairs):
-        question = pair["latex"]
+        question = pair["text"]
 
         # cold call
         t0 = time.perf_counter()
