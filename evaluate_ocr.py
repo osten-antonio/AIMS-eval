@@ -4,6 +4,7 @@ import os
 import requests
 import time
 import jiwer
+import pandas as pd
 
 ENDPOINTS = [
     ("http://localhost:9000/nougat-base/inference", "nougat-base"),
@@ -35,20 +36,6 @@ def normalize_latex(s):
         return ""
     return " ".join(s.split())
 
-def levenshtein(s1, s2):
-    """Compute Levenshtein (edit) distance between two strings."""
-    m, n = len(s1), len(s2)
-    dp = [[0] * (n + 1) for _ in range(m + 1)]
-    for i in range(m + 1):
-        dp[i][0] = i
-    for j in range(n + 1):
-        dp[0][j] = j
-    for i in range(1, m + 1):
-        for j in range(1, n + 1):
-            cost = 0 if s1[i - 1] == s2[j - 1] else 1
-            dp[i][j] = min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + cost)
-    return dp[m][n]
-
 def compute_metrics(reference, hypothesis):
     """Compute three metrics: exact match, normalized edit distance, raw edit distance."""
     ref_norm = normalize_latex(reference) if reference else ""
@@ -57,9 +44,11 @@ def compute_metrics(reference, hypothesis):
     exact = ref_norm == hyp_norm
 
     # Levenshtein distance
-    lev_dist = levenshtein(ref_norm, hyp_norm)
-    ref_len = len(ref_norm) if ref_norm else 1
-    normalized_edit = lev_dist / ref_len
+    output = jiwer.process_characters(reference, hypothesis)
+    lev_dist = output.substitutions + output.deletions + output.insertions
+    ref_len = len(ref_norm) if ref_norm else 1 
+    denom = max(len(ref_norm), len(hyp_norm), 1)
+    normalized_edit = lev_dist / denom
 
     return {
         "exact_match": exact,
@@ -110,10 +99,9 @@ if __name__ == "__main__":
         results.append(item_results)
 
     # Save results
-    with open("data/inference_results.json", "w") as f:
-        json.dump(results, f, indent=2)
+    pd.DataFrame(results).to_csv("data/inference_results.csv", index=False)
 
-    print(f"\nResults saved to data/inference_results.json ({len(results)} items)")
+    print(f"\nResults saved to data/inference_results.csv ({len(results)} items)")
 
     # Print summary
     for url, model_name in ENDPOINTS:
