@@ -29,17 +29,16 @@ def generate_steps(qa_pairs: list, limit: int, model: str):
         qa_pairs = qa_pairs[:limit]
 
     for i, pair in enumerate(qa_pairs):
-        question = pair["text"]
-        expected_answer = str(pair["final_answer"])
-        category = CATEGORY_MAP.get(pair.get("category", ""), "General")
-        
+        question = pair['Challenge']
+        expected_answer = str(pair["Answer in Latex"])
+        category = "General"        
         print(f"[{i+1}/{len(qa_pairs)}] Generating for: {question[:50]}...")
 
         try:
             resp_anchored = requests.post(
                 f"{BASE_URL}/explanation/steps/",
                 json={"question": question, "answer": expected_answer, "category": category, "forced": True, "model": model},
-                timeout=120
+                timeout=300
             )
             anchored_data = resp_anchored.json()
         except Exception as e:
@@ -50,7 +49,7 @@ def generate_steps(qa_pairs: list, limit: int, model: str):
             resp_unanchored = requests.post(
                 f"{BASE_URL}/explanation/steps/",
                 json={"question": question, "answer": "", "category": category, "forced": True, "model": model},
-                timeout=120
+                timeout=300
             )
             unanchored_data = resp_unanchored.json()
         except Exception as e:
@@ -59,7 +58,7 @@ def generate_steps(qa_pairs: list, limit: int, model: str):
 
         # Serialize steps to JSON strings so they fit in pandas CSV cells
         results.append({
-            "id": pair.get("id", i),
+            "id": pair.get("ID", i),
             "question": question,
             "expected_answer": expected_answer,
             "anchored_steps": json.dumps(anchored_data.get("steps", [])),
@@ -69,7 +68,7 @@ def generate_steps(qa_pairs: list, limit: int, model: str):
     # Create output directory and save via pandas
     output_dir = Path("results")
     output_dir.mkdir(exist_ok=True, parents=True)
-    output_file = output_dir / f"explanations_{model.replace('/', '_').replace(':', '_')}.csv"
+    output_file = output_dir / f"explanations_ASyMOB_{model.replace('/', '_').replace(':', '_')}.csv"
     
     df = pd.DataFrame(results)
     df.to_csv(output_file, index=False)
@@ -77,15 +76,12 @@ def generate_steps(qa_pairs: list, limit: int, model: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--data", default="data/qa_pairs.json")
+    parser.add_argument("--data", default="data/ASyMOB_200_unique.json")
     parser.add_argument("--model", required=True, help="Model name for output file naming")
-    parser.add_argument("--limit", type=int, default=15)
+    parser.add_argument("--limit", type=int, default=200)
     args = parser.parse_args()
     
     with open(args.data) as f:
         qa_pairs = json.load(f)
-        
-    # Filter for word problems
-    qa_pairs = [p for p in qa_pairs if p.get("category") == "word_problem"]
-    
+          
     generate_steps(qa_pairs, args.limit, args.model)
