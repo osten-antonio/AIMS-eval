@@ -207,7 +207,7 @@ Refer to `evaluation_summary.ipynb` for the full per-model tables and figures.
 | Purpose | Dataset | Source |
 |---|---|---|
 | Synthetic OCR benchmark | Rendered in-repo by `generate_equations.py` + `render_items.py` | This repo |
-| Real-world OCR probe | FASTMATHxASSUMPTION 2025 (filtered to n=2,308 valid outputs) | [Link](https://www.kaggle.com/datasets/mssjss/fastmathxassumption-2025-handwritten-math-to-latex) |
+| Real-world OCR probe | FASTMATHxASSUMPTION 2025 (filtered to n=2,308 valid outputs) | [Kaggle](https://www.kaggle.com/datasets/mssjss/fastmathxassumption-2025-handwritten-math-to-latex) |
 | Solver QA | 60 hand-authored items across 9 categories | `data/qa_pairs.json` |
 | Explanation eval | ASyMOB (200-item reproducible subset) | [arXiv:2505.23851](https://arxiv.org/abs/2505.23851) |
 
